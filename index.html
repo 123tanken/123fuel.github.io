@@ -2,25 +2,42 @@
 layout: default
 navpill: index
 ---
+
 <div class="jumbotron">
   <h1 style="margin-top:-10px;">
-    <img id="hero-logo"
+    <img
+      id="hero-logo"
       src="images/app_icon_large.png"
       srcset="images/app_icon_large@2x.png 2x"
-      alt="1-2-3 Fuel App Icon" />
+      alt="1-2-3 Fuel App Icon"
+    />
     <span class="nowrap">1-2-3 Fuel</span>
   </h1>
   <p class="lead">
-    Download the intuitive 1-2-3 Fuel app for free and start saving money. The iPhone app is available in the App Store and the Android app in the Google Play Store.
+    Download the intuitive 1-2-3 Fuel app for free and start saving money now. The iPhone app is available in the App Store and the Android app in the Google Play Store for free.
   </p>
   <p>
     <!-- App Store -->
-    <a href="https://itunes.apple.com/de/app/1-2-3-tanken/id688981330?mt=8" target="itunes_store">
-      <img src="images/app_store_badge.svg" width="135px" height="40px" alt="Laden im App Store">
+    <a
+      href="https://itunes.apple.com/de/app/1-2-3-tanken/id688981330?mt=8"
+      target="itunes_store"
+    >
+      <img
+        src="images/app_store_badge.svg"
+        width="135px"
+        height="40px"
+        alt="Download on the App Store"
+      />
     </a>
     <!-- Play Store -->
-    <a href='https://play.google.com/store/apps/details?id=de.bottledsoftware.tanken&utm_source=website&utm_campaign=website&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
-      <img alt='Jetzt bei Google Play' height="60px" src='https://play.google.com/intl/en_us/badges/images/generic/de_badge_web_generic.png'/>
+    <a
+      href="https://play.google.com/store/apps/details?id=de.bottledsoftware.tanken&utm_source=website&utm_campaign=website&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+    >
+      <img
+        alt="Get it on Google Play"
+        height="60px"
+        src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"
+      />
     </a>
   </p>
 </div>
@@ -28,7 +45,9 @@ navpill: index
 <div class="device-switch container-fluid">
   <div class="btn-group" role="group">
     <button type="button" class="ios-button btn btn-default btn-lg">iOS</button>
-    <button type="button" class="android-button btn btn-default btn-lg">Android</button>
+    <button type="button" class="android-button btn btn-default btn-lg">
+      Android
+    </button>
   </div>
 </div>
 
@@ -36,223 +55,289 @@ navpill: index
   $(document).ready(function() {
     var useragent = navigator.userAgent.toLowerCase();
     var isAndroid = useragent.indexOf("android") > -1;
-    var forceAndroid = window.location.href.includes('#android');
-    var forceIOS = window.location.href.includes('#ios');
+    var forceAndroid = window.location.href.includes("#android");
+    var forceIOS = window.location.href.includes("#ios");
     var reset = function() {
-      $('.btn').removeClass('active')
-      $('.ios').removeClass('invisible')
-      $('.android').removeClass('invisible')
-    }
+      $(".btn").removeClass("active");
+      $(".ios").removeClass("invisible");
+      $(".android").removeClass("invisible");
+    };
     var activateAndroid = function() {
       reset();
-      $('.android-button').addClass('active')
-      $('.ios').addClass('invisible')
-    }
+      $(".android-button").addClass("active");
+      $(".ios").addClass("invisible");
+    };
     var activateIOS = function() {
       reset();
-      $('.ios-button').addClass('active')
-      $('.android').addClass('invisible')
-    }
+      $(".ios-button").addClass("active");
+      $(".android").addClass("invisible");
+    };
 
-    $('.android-button').click(activateAndroid);
-    $('.ios-button').click(activateIOS);
+    $(".android-button").click(activateAndroid);
+    $(".ios-button").click(activateIOS);
     if (forceIOS) {
-      activateIOS()
+      activateIOS();
     } else if (forceAndroid || isAndroid) {
-      activateAndroid()
+      activateAndroid();
     } else {
-      activateIOS()
+      activateIOS();
     }
-  })
+  });
 </script>
 
 <div class="feature-presentation container-fluid">
-
   <div class="row feature-presentation-even">
     <div class="col-xs-12 col-sm-7 feature-text">
-      <h1>Up-to-the-minute fuel prices</h1>
+      <h1>Always Up-To-Date Fuel Prices</h1>
       <p>
-        With the 1-2-3 Fuel App you can easily find the current fuel prices. The app shows the official fuel price data from the stations in real time.
+        With the 1-2-3 Fuel App you can easily find the current fuel prices for
+        Germany, France, Italy, Spain and Portugal. The fuel stations report the
+        required data directly to a central system and we forward it to you
+        immediately.
       </p>
     </div>
     <div class="col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-0">
       <div class="ios">
-        <img src="images/screenshots/details_with_phone.jpg"
+        <img
+          src="images/screenshots/details_with_phone.jpg"
           srcset="images/screenshots/details_with_phone@2x.jpg 2x"
-          alt="Screenshot Detailansicht"/>
+          alt="Screenshot Detailansicht"
+        />
       </div>
       <div class="android invisible">
-        <img src="images/screenshots/android/frame.png"
-          alt="Google Pixel Smartphone Device Art"/>
-        <img class="screenshot"
+        <img
+          src="images/screenshots/android/frame.png"
+          alt="Google Pixel Smartphone Device Art"
+        />
+        <img
+          class="screenshot"
           src="images/screenshots/android/details.png"
-          alt="Screenshot Detailansicht"/>
+          alt="Screenshot Detailansicht"
+        />
       </div>
-    </div> </div>
+    </div>
+  </div>
   <div class="row feature-presentation-odd">
     <div class="col-xs-12 col-sm-7 feature-text">
-      <h1>Map view of all stations</h1>
+      <h1>Map With All Fuel Stations</h1>
       <p>
-        No matter whether you want to find petrol stations near you or in another city: The map view gives you an immediate overview of all important information.
+        Whether you want to find fuel stations near you or in another city: In
+        the map view you can find all important information at a glance.
       </p>
     </div>
     <div class="col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-0">
       <div class="ios">
-        <img src="images/screenshots/map_with_phone.jpg"
+        <img
+          src="images/screenshots/map_with_phone.jpg"
           srcset="images/screenshots/map_with_phone@2x.jpg 2x"
-          alt="Screenshot Karte"/>
+          alt="Screenshot Map"
+        />
       </div>
       <div class="android invisible">
-        <img src="images/screenshots/android/frame.png"
-          alt="Google Pixel Smartphone Device Art"/>
-        <img class="screenshot"
+        <img
+          src="images/screenshots/android/frame.png"
+          alt="Google Pixel Smartphone Device Art"
+        />
+        <img
+          class="screenshot"
           src="images/screenshots/android/map.png"
-          alt="Screenshot Karte"/>
+          alt="Screenshot Karte"
+        />
       </div>
     </div>
   </div>
 
   <div class="row feature-presentation-even">
     <div class="col-xs-12 col-sm-7 feature-text">
-      <h1>Fuel stations along your route</h1>
+      <h1>Fuel Stations Along Your Route</h1>
       <p>
-        You plan to drive a longer distance and want to refuel as cheap as possible on the way? No problem! Simply enter your start and destination and 1-2-3 Fuel will show you the cheapest fuel stations on your way.
+        You plan to drive a longer distance and want to refuel on the way as
+        cheap as possible? No problem! Just enter your start and destination and
+        1-2-3 Fuel will show you the cheapest petrol stations on the way.
       </p>
     </div>
     <div class="col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-0">
       <div class="ios">
-        <img src="images/screenshots/route_with_phone.jpg"
+        <img
+          src="images/screenshots/route_with_phone.jpg"
           srcset="images/screenshots/route_with_phone@2x.jpg 2x"
-          alt="Screenshot Route"/>
+          alt="Screenshot Route"
+        />
       </div>
       <div class="android invisible">
-        <img src="images/screenshots/android/frame.png"
-          alt="Google Pixel Smartphone Device Art"/>
-        <img class="screenshot"
+        <img
+          src="images/screenshots/android/frame.png"
+          alt="Google Pixel Smartphone Device Art"
+        />
+        <img
+          class="screenshot"
           src="images/screenshots/android/route.png"
-          alt="Screenshot Route"/>
+          alt="Screenshot Route"
+        />
       </div>
     </div>
   </div>
 
   <div class="row feature-presentation-odd">
     <div class="col-xs-12 col-sm-7 feature-text">
-      <h1>Smart list view</h1>
+      <h1>Neat List View</h1>
       <p>
-        You want to see immediately where to best refuel your car? In the list view you can immediately see which fuel stations are the cheapest. And to make sure you don't waste more fuel on your way to the gas station than you save in the end, all gas stations are grouped by distance.
+        You want to see right now where it makes the most sense to refuel? In
+        the list view you can immediately see which fuel stations are the
+        cheapest. And to make sure you don't consume more fuel on your way to
+        the gas station than you save in the end, all gas stations are grouped
+        by distance.
       </p>
     </div>
     <div class="col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-0">
       <div class="ios">
-        <img src="images/screenshots/list_with_phone.jpg"
+        <img
+          src="images/screenshots/list_with_phone.jpg"
           srcset="images/screenshots/list_with_phone@2x.jpg 2x"
-          alt="Screenshot Liste"/>
+          alt="Screenshot List"
+        />
       </div>
       <div class="android invisible">
-        <img src="images/screenshots/android/frame.png"
-          alt="Google Pixel Smartphone Device Art"/>
-        <img class="screenshot"
+        <img
+          src="images/screenshots/android/frame.png"
+          alt="Google Pixel Smartphone Device Art"
+        />
+        <img
+          class="screenshot"
           src="images/screenshots/android/list.png"
-          alt="Screenshot Liste"/>
+          alt="Screenshot List"
+        />
       </div>
     </div>
   </div>
 
   <div class="row feature-presentation-even">
     <div class="col-xs-12 col-sm-7 feature-text">
-      <h1>Your favorites, just one tap away</h1>
+      <h1>All Your Favorites At A Glance</h1>
       <p>
-        Do you have fuel stations where you prefer to fill up and want to keep an eye on them at all times? With 1-2-3 Fuel you can create a list of favorites. So you can always keep track of the prices at preferred fuel stations.
+        You have certain fuel stations where you prefer to fill up and want to
+        keep an eye on them? With the 1-2-3 Fuel app you can create a favorites
+        list. So you always have the prices of your favorite fuel stations
+        available at a glance.
       </p>
     </div>
     <div class="col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-0">
       <div class="ios">
-        <img src="images/screenshots/favorites_with_phone.jpg"
+        <img
+          src="images/screenshots/favorites_with_phone.jpg"
           srcset="images/screenshots/favorites_with_phone@2x.jpg 2x"
-          alt="Screenshot Favoriten"/>
+          alt="Screenshot Favorites"
+        />
       </div>
       <div class="android">
-        <img src="images/screenshots/android/frame.png"
-          alt="Google Pixel Smartphone Device Art"/>
-        <img class="screenshot"
+        <img
+          src="images/screenshots/android/frame.png"
+          alt="Google Pixel Smartphone Device Art"
+        />
+        <img
+          class="screenshot"
           src="images/screenshots/android/favorites.png"
-          alt="Screenshot Favoriten"/>
+          alt="Screenshot Favorites"
+        />
       </div>
     </div>
   </div>
 
   <div class="row feature-presentation-odd">
     <div class="col-xs-12 col-sm-7 feature-text">
-      <h1>Always up to date</h1>
+      <h1>Always Up-To-Date</h1>
       <p>
-        With the smart price alert you are always up to date even without opening the app. Simply set for which petrol stations and fuel types you would like to be informed about price reductions. You will then receive a notification directly on your smartphone as soon as the price drops.
+        Thanks to the price alert you are always up-to-date even without opening
+        the app. Simply select for which fuel stations and fuel types you would
+        like to get notified about price reductions. You will then receive a
+        notification directly on your smartphone as soon as the price falls.
       </p>
     </div>
     <div class="col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-0">
       <div class="ios">
-        <img src="images/screenshots/price_alarm_with_phone.jpg"
-          srcset="images/screenshots/price_alarm_with_phone@2x.jpg 2x"
-          alt="Screenshot Preisalarm"/>
+        <img
+          src="images/screenshots/price_alert_with_phone.jpg"
+          srcset="images/screenshots/price_alert_with_phone@2x.jpg 2x"
+          alt="Screenshot Price Alert"
+        />
       </div>
       <div class="android invisible">
-        <img src="images/screenshots/android/frame.png"
-          alt="Google Pixel Smartphone Device Art"/>
-        <img class="screenshot"
-          src="images/screenshots/android/price_alarm.png"
-          alt="Screenshot Preisalarm"/>
+        <img
+          src="images/screenshots/android/frame.png"
+          alt="Google Pixel Smartphone Device Art"
+        />
+        <img
+          class="screenshot"
+          src="images/screenshots/android/price_alert.png"
+          alt="Screenshot Price Alert"
+        />
       </div>
     </div>
   </div>
 
   <div class="row feature-presentation-even">
     <div class="col-xs-12 col-sm-7 feature-text">
-      <h1>Interactive price history</h1>
+      <h1>Interactive Price History</h1>
       <p>
-        You can view interactive price statistics for each fuel station. This makes it even easier to determine the ideal time to refuel.
+        For every fuel station you can view interactive price statistics. This
+        makes it even easier to determine the ideal time to refuel.
       </p>
     </div>
     <div class="col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-0">
       <div class="ios">
-        <img src="images/screenshots/statistics_with_phone_2.jpg"
-          srcset="images/screenshots/statistics_with_phone_2@2x.jpg 2x"
-          alt="Screenshot Preisstatistiken"/>
+        <img
+          src="images/screenshots/statistics_with_phone.jpg"
+          srcset="images/screenshots/statistics_with_phone@2x.jpg 2x"
+          alt="Screenshot Interactive Price History"
+        />
       </div>
       <div class="android invisible">
-        <img src="images/screenshots/android/frame.png"
-          alt="Google Pixel Smartphone Device Art"/>
-        <img class="screenshot"
+        <img
+          src="images/screenshots/android/frame.png"
+          alt="Google Pixel Smartphone Device Art"
+        />
+        <img
+          class="screenshot"
           src="images/screenshots/android/statistics.png"
-          alt="Screenshot Preisstatistiken"/>
+          alt="Screenshot Interactive Price History"
+        />
       </div>
     </div>
   </div>
 
   <div class="row feature-presentation-odd ios">
     <div class="col-xs-12 col-sm-7 feature-text">
-      <h1>Always well informed</h1>
+      <h1>Always Well Informed</h1>
       <p>
-        With the 1-2-3 Fuel widget for the iOS notification center, you can always see the prices at your favorite fuel stations without having to open the app.
+        With the 1-2-3 Fuel widget for the notification ceter you can always see
+        the prices of your favorite fuel stations without having to open the
+        app.
       </p>
     </div>
     <div class="col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-0">
-      <img src="images/screenshots/widget_with_phone.jpg"
+      <img
+        src="images/screenshots/widget_with_phone.jpg"
         srcset="images/screenshots/widget_with_phone@2x.jpg 2x"
-        alt="Screenshot Preisalarm"/>
+        alt="Screenshot Widget"
+      />
     </div>
   </div>
 
   <div class="row feature-presentation-even ios">
     <div class="col-xs-12 col-sm-7 feature-text">
-      <h1>Apple Watch app</h1>
+      <h1>Apple Watch App</h1>
       <p>
-        1-2-3 Fuel is also available for Apple Watch. In the watch app you can check the prices of your favorite fuel station or find the cheapest stations at your current location, all directly at your wrist.
+        1-2-3 Fuel is also available for the Apple Watch. You can check the
+        prices of your favorite fuel station or find the cheapest fuel station
+        in the area fast and easy, directly on your wrist.
       </p>
     </div>
     <div class="col-xs-8 col-xs-offset-2 col-sm-5 col-sm-offset-0">
-      <img src="images/screenshots/favorites_with_watch.jpg"
+      <img
+        src="images/screenshots/favorites_with_watch.jpg"
         srcset="images/screenshots/favorites_with_watch@2x.jpg 2x"
-        alt="Screenshot Preisstatistiken"/>
+        alt="Screenshot Apple Watch"
+      />
     </div>
   </div>
-
 </div>
