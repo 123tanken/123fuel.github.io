@@ -1,5 +1,5 @@
-name: 1-2-3 Tanken
+name: 1-2-3 Fuel
 markdown: kramdown
 highlighter: rouge
 encoding: UTF-8
-safe: true
+include: [".well-known"]
